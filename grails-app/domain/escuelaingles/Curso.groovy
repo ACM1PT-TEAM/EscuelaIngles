@@ -12,7 +12,7 @@ class Curso
     static constraints = 
     {
         nombreCurso blank:false
-        nivel blank:false
+        nivel blank:false, nullable:false
         seleccion blank:false, nullable: false
     }
 }
