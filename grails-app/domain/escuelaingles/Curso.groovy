@@ -13,6 +13,6 @@ class Curso
     {
         nombreCurso blank:false
         nivel blank:false
-        seleccion blank:false
+        seleccion blank:false, nullable: false
     }
 }
