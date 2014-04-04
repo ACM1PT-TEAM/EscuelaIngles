@@ -9,7 +9,7 @@ class ProfesorController {
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
-        params.max = Math.min(max ?: 10, 100)
+        params.max = Math.min(max ?: 1, 100)
         respond Profesor.list(params), model:[profesorInstanceCount: Profesor.count()]
     }
 
