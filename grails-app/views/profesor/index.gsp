@@ -5,7 +5,6 @@
 	<head>
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'profesor.label', default: 'Profesor')}" />
-		<title><g:message code="default.list.label" args="[entityName]" /></title>
 	</head>
 	<body>
 		<a href="#list-profesor" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
@@ -32,9 +31,7 @@
 					
 						<g:sortableColumn property="correoElectronico" title="${message(code: 'profesor.correoElectronico.label', default: 'Correo Electronico')}" />
 					
-						<g:sortableColumn property="password" title="${message(code: 'profesor.password.label', default: 'Password')}" />
-					
-						<g:sortableColumn property="usuario" title="${message(code: 'profesor.usuario.label', default: 'Usuario')}" />
+						<g:sortableColumn property="nivel" title="${message(code: 'profesor.nivel.label', default: 'Nivel')}" />
 					
 					</tr>
 				</thead>
@@ -50,9 +47,7 @@
 					
 						<td>${fieldValue(bean: profesorInstance, field: "correoElectronico")}</td>
 					
-						<td>${fieldValue(bean: profesorInstance, field: "password")}</td>
-					
-						<td>${fieldValue(bean: profesorInstance, field: "usuario")}</td>
+						<td>${fieldValue(bean: profesorInstance, field: "nivel")}</td>                                                                                                                                          
 					
 					</tr>
 				</g:each>

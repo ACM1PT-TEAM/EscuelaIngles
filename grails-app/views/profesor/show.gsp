@@ -59,6 +59,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${profesorInstance?.nivel}">
+				<li class="fieldcontain">
+					<span id="nivel-label" class="property-label"><g:message code="profesor.nivel.label" default="Nivel" /></span>
+					
+						<span class="property-value" aria-labelledby="nivel-label"><g:fieldValue bean="${profesorInstance}" field="nivel"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${profesorInstance?.password}">
 				<li class="fieldcontain">
 					<span id="password-label" class="property-label"><g:message code="profesor.password.label" default="Password" /></span>
