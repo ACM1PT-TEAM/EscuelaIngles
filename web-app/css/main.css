@@ -11,7 +11,7 @@ h1, h2, h3, h4, h5, h6 {
 /* BASE LAYOUT */
 
 html {
-	background-color: #abbf78;
+	background-color: #FFFAFA;
 	background-image: -moz-linear-gradient(center top, #aaa, #ddd);
 	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #aaa), color-stop(1, #ddd));
 	background-image: linear-gradient(top, #aaa, #ddd);
@@ -48,7 +48,7 @@ body {
 }
 
 #grailsLogo {
-	background-color: #abbf78;
+	background-color: #B22222;
 }
 
 /* replace with .no-boxshadow body if you have modernizr available */
@@ -108,7 +108,7 @@ img {
 }
 
 .footer {
-	background: #abbf78;
+	background: #B22222;
 	color: #000;
 	clear: both;
 	font-size: 0.8em;

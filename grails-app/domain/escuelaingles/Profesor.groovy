@@ -25,7 +25,7 @@ class Profesor
         horarios(size:15..100, blanck:false, nullable:false)
         password (size:8..12,blank:false,password:true)
         usuario(size: 5..15, blank:false, unique:true)
-        video (blank:false,url:true)
-        constancia (black:false,url:true)
+        video (blank:false,nullable:false)//,url:true)
+        constancia (black:false,nullable:false)//,url:true)
     }
 }

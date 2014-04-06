@@ -68,6 +68,24 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${profesorInstance?.dias}">
+				<li class="fieldcontain">
+					<span id="dias-label" class="property-label"><g:message code="profesor.dias.label" default="Dias" /></span>
+					
+						<span class="property-value" aria-labelledby="dias-label"><g:fieldValue bean="${profesorInstance}" field="dias"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${profesorInstance?.horarios}">
+				<li class="fieldcontain">
+					<span id="horarios-label" class="property-label"><g:message code="profesor.horarios.label" default="Horarios" /></span>
+					
+						<span class="property-value" aria-labelledby="horarios-label"><g:fieldValue bean="${profesorInstance}" field="horarios"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${profesorInstance?.password}">
 				<li class="fieldcontain">
 					<span id="password-label" class="property-label"><g:message code="profesor.password.label" default="Password" /></span>
