@@ -31,7 +31,7 @@
 		<g:message code="profesor.correoElectronico.label" default="Correo Electronico" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field type="email" name="correoElectronico" required="" value="${profesorInstance?.correoElectronico}"/>
+	<g:field type="email" name="correoElectronico" required="" value="example@dominio.com" style="font-style:italic" style="font-size:smaller"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: profesorInstance, field: 'nivel', 'error')} ">
@@ -41,11 +41,12 @@
 	</label>
 	<g:select name="nivel" from="${profesorInstance.constraints.nivel.inList}" value="${profesorInstance?.nivel}" valueMessagePrefix="profesor.nivel" noSelection="['': 'I']"/>
 </div>
-
 <div class="fieldcontain ${hasErrors(bean: profesorInstance, field: 'dias', 'error')} required">
 	<label for="dias">
 		<g:message code="profesor.dias.label" default="Dias" />
 		<span class="required-indicator">*</span>
+                <br/>
+                <span style="font-size:smaller"style="font-style:italic">(Deje presionado 'ctrl' para seleccionar más de una opción)</span>
 	</label>
 	 <select name="dias" multiple="true">
             <option value="lunes">Lunes</option>
@@ -62,6 +63,8 @@
 	<label for="horarios">
 		<g:message code="profesor.horarios.label" default="Horarios" />
 		<span class="required-indicator">*</span>
+                <br/>
+                <span style="font-size:smaller" style="font-style:italic">(Deje presionado 'ctrl' para seleccionar más de una opción)</span>
 	</label>
         <select name="horarios" multiple="true">
             <option value="7:00-9:00">7:00-9:00</option>
@@ -78,6 +81,8 @@
 	<label for="password">
 		<g:message code="profesor.password.label" default="Password" />
 		<span class="required-indicator">*</span>
+                <br/>
+                <span style="font-size:smaller"style="font-style:italic">Min. 8 caractéres Max. 12 caractéres</span>
 	</label>
 	<g:field type="password" name="password" required="" value="${profesorInstance?.password}"/>
 </div>
@@ -86,6 +91,8 @@
 	<label for="usuario">
 		<g:message code="profesor.usuario.label" default="Usuario" />
 		<span class="required-indicator">*</span>
+                 <br/>
+                <span style="font-size:smaller"style="font-style:italic">Min. 5 caractéres Max. 15 caractéres</span>
 	</label>
 	<g:textField name="usuario" maxlength="15" required="" value="${profesorInstance?.usuario}"/>
 </div>

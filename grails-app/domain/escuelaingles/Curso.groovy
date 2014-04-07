@@ -4,15 +4,24 @@ class Curso
 {
     String nombreCurso
     String nivel
-    Profesor Profesor
-    Date Horario
-    Date Dia
-    int seleccion
+    String Horario
+    String Dia
+    Boolean aceptado
+    
+    static belongsTo = [Profesor:Profesor]
     
     static constraints = 
     {
-        nombreCurso blank:false
-        nivel blank:false, nullable:false
-        seleccion blank:false, nullable: false
+        nombreCurso(default:"Ingles")
+        nivel(blank:false, nullable:false)
+        Profesor()
+        Horario()
+        Dia()
+        aceptado(default:false)
+    }
+    
+    String toString()
+    {
+        return "${nombreCurso}, ${nivel}"
     }
 }
