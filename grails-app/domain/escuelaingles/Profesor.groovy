@@ -31,8 +31,23 @@ class Profesor
         constancia (black:false,nullable:false)//,url:true)
     }
     
+    String getNivel()
+    {
+        return nivel
+    }
+    
+    String getDias()
+    {
+        return dias
+    }
+    
+    String getHorarios()
+    {
+        return horarios
+    }
+    
     String toString()
     {
-        return "${nombre}, ${apellidoPaterno},${apellidoMaterno},${correoElectronico}"
+        return "${nombre} ${apellidoPaterno} ${apellidoMaterno}"
     }
 }

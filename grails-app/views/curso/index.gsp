@@ -26,16 +26,16 @@
 					
 						<g:sortableColumn property="nombreCurso" title="${message(code: 'curso.nombreCurso.label', default: 'Nombre Curso')}" />
 					
-						<g:sortableColumn property="nivel" title="${message(code: 'curso.nivel.label', default: 'Nivel')}" />
-					
-						<g:sortableColumn property="seleccion" title="${message(code: 'curso.seleccion.label', default: 'Seleccion')}" />
-					
-						<g:sortableColumn property="dia" title="${message(code: 'curso.dia.label', default: 'Dia')}" />
-					
-						<g:sortableColumn property="horario" title="${message(code: 'curso.horario.label', default: 'Horario')}" />
+						<th>Nivel</th>
 					
 						<th><g:message code="curso.profesor.label" default="Profesor" /></th>
 					
+                                                <th>Horarios</th>
+                                                
+                                                <th>Dias</th>
+                                                
+                                                <th>Video</th>
+
 					</tr>
 				</thead>
 				<tbody>
@@ -44,16 +44,14 @@
 					
 						<td><g:link action="show" id="${cursoInstance.id}">${fieldValue(bean: cursoInstance, field: "nombreCurso")}</g:link></td>
 					
-						<td>${fieldValue(bean: cursoInstance, field: "nivel")}</td>
-					
-						<td>${fieldValue(bean: cursoInstance, field: "seleccion")}</td>
-					
-						<td><g:formatDate date="${cursoInstance.dia}" /></td>
-					
-						<td><g:formatDate date="${cursoInstance.horario}" /></td>
-					
+                                                <td>${cursoInstance?.profesor?.nivel}</td>
+                                                
 						<td>${fieldValue(bean: cursoInstance, field: "profesor")}</td>
-					
+                         
+                                                <td>${cursoInstance?.profesor?.horarios}</td>
+                                                
+                                                <td>${cursoInstance?.profesor?.dias}</td>
+				
 					</tr>
 				</g:each>
 				</tbody>

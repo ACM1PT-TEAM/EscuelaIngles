@@ -122,6 +122,17 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${profesorInstance?.cursos}">
+				<li class="fieldcontain">
+					<span id="cursos-label" class="property-label"><g:message code="profesor.cursos.label" default="Cursos" /></span>
+					
+						<g:each in="${profesorInstance.cursos}" var="c">
+						<span class="property-value" aria-labelledby="cursos-label"><g:link controller="curso" action="show" id="${c.id}">${c?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
 			</ol>
 			<g:form url="[resource:profesorInstance, action:'delete']" method="DELETE">
 				<fieldset class="buttons">

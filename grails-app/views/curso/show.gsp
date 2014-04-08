@@ -32,42 +32,6 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${cursoInstance?.nivel}">
-				<li class="fieldcontain">
-					<span id="nivel-label" class="property-label"><g:message code="curso.nivel.label" default="Nivel" /></span>
-					
-						<span class="property-value" aria-labelledby="nivel-label"><g:fieldValue bean="${cursoInstance}" field="nivel"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${cursoInstance?.seleccion}">
-				<li class="fieldcontain">
-					<span id="seleccion-label" class="property-label"><g:message code="curso.seleccion.label" default="Seleccion" /></span>
-					
-						<span class="property-value" aria-labelledby="seleccion-label"><g:fieldValue bean="${cursoInstance}" field="seleccion"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${cursoInstance?.dia}">
-				<li class="fieldcontain">
-					<span id="dia-label" class="property-label"><g:message code="curso.dia.label" default="Dia" /></span>
-					
-						<span class="property-value" aria-labelledby="dia-label"><g:formatDate date="${cursoInstance?.dia}" /></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${cursoInstance?.horario}">
-				<li class="fieldcontain">
-					<span id="horario-label" class="property-label"><g:message code="curso.horario.label" default="Horario" /></span>
-					
-						<span class="property-value" aria-labelledby="horario-label"><g:formatDate date="${cursoInstance?.horario}" /></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${cursoInstance?.profesor}">
 				<li class="fieldcontain">
 					<span id="profesor-label" class="property-label"><g:message code="curso.profesor.label" default="Profesor" /></span>
@@ -76,6 +40,15 @@
 					
 				</li>
 				</g:if>
+			
+				<!--<g:if test="${cursoInstance?.aceptado}">
+				<li class="fieldcontain">
+					<span id="aceptado-label" class="property-label"><g:message code="curso.aceptado.label" default="Aceptado" /></span>
+					
+						<span class="property-value" aria-labelledby="aceptado-label"><g:fieldValue bean="${cursoInstance}" field="aceptado"/></span>
+					
+				</li>
+				</g:if>-->
 			
 			</ol>
 			<g:form url="[resource:cursoInstance, action:'delete']" method="DELETE">

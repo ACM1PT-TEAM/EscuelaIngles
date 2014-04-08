@@ -7,15 +7,17 @@ class Curso
    
     static belongsTo = [profesor:Profesor]
     
+    static hasMany = [alumnos:Alumno]
+    
     static constraints = 
     {
-        nombreCurso() 
-        profesor()
-        aceptado(inLst:["Aceptado","No Aceptado"])
+        nombreCurso(inList:["Ingles"]) 
+        profesor(blanck:false,nullable:false)
+        aceptado(inList:["Aceptado","No Aceptado"],nullable:false,blanck:false)
     }
     
     String toString()
     {
-        return "${nombreCurso}"
+        return "${id} ${nombreCurso} "
     }
 }

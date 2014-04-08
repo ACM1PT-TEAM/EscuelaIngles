@@ -7,9 +7,11 @@ class Alumno
     String apellidoMaterno
     String correoElectronico
     String telefono
-    int aprobado
+    String aprobado
     String password
     String usuario
+    
+     static belongsTo = [curso:Curso]
     
     static constraints = 
     {
@@ -18,7 +20,7 @@ class Alumno
         apellidoMaterno(blank:false, nullable:false)
         correoElectronico(blank:false, nullable:false, email:true,unique:true)
         telefono(blank:false, nullable:false)
-        aprobado()
+        aprobado(inList:["APROBADO","NO APROBADO"])
         password(blank:false, nullable:false,password:true)
         usuario(blank:false, nullable:false,unique:true)
     }

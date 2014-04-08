@@ -31,7 +31,7 @@
 		<g:message code="alumno.correoElectronico.label" default="Correo Electronico" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field type="email" name="correoElectronico" required="" value="${alumnoInstance?.correoElectronico}"/>
+	<g:field type="email" name="correoElectronico" required="" value="example@dominio.com"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: alumnoInstance, field: 'telefono', 'error')} required">
@@ -42,13 +42,13 @@
 	<g:textField name="telefono" required="" value="${alumnoInstance?.telefono}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: alumnoInstance, field: 'aprobado', 'error')} required">
+<!--<div class="fieldcontain ${hasErrors(bean: alumnoInstance, field: 'aprobado', 'error')} ">
 	<label for="aprobado">
 		<g:message code="alumno.aprobado.label" default="Aprobado" />
-		<span class="required-indicator">*</span>
+		
 	</label>
-	<g:field name="aprobado" type="number" value="${alumnoInstance.aprobado}" required=""/>
-</div>
+	<g:select name="aprobado" from="${alumnoInstance.constraints.aprobado.inList}" value="${alumnoInstance?.aprobado}" valueMessagePrefix="alumno.aprobado" noSelection="['': '']"/>
+</div>-->
 
 <div class="fieldcontain ${hasErrors(bean: alumnoInstance, field: 'password', 'error')} required">
 	<label for="password">
