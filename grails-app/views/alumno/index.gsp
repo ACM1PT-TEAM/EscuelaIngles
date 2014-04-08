@@ -34,7 +34,7 @@
 					
 						<g:sortableColumn property="telefono" title="${message(code: 'alumno.telefono.label', default: 'Telefono')}" />
 					
-						<g:sortableColumn property="aprobado" title="${message(code: 'alumno.aprobado.label', default: 'Aprobado')}" />
+						<th>Curso</th>
 					
 					</tr>
 				</thead>
@@ -52,7 +52,7 @@
 					
 						<td>${fieldValue(bean: alumnoInstance, field: "telefono")}</td>
 					
-						<td>${fieldValue(bean: alumnoInstance, field: "aprobado")}</td>
+						<td>${alumnoInstance?.curso?.id}  ${alumnoInstance?.curso?.nombreCurso}</td>
 					
 					</tr>
 				</g:each>

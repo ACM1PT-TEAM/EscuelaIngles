@@ -34,8 +34,6 @@
 					
 						<g:sortableColumn property="nivel" title="${message(code: 'profesor.nivel.label', default: 'Nivel')}" />
 					
-						<g:sortableColumn property="dias" title="${message(code: 'profesor.dias.label', default: 'Dias')}" />
-					
 					</tr>
 				</thead>
 				<tbody>
@@ -51,8 +49,6 @@
 						<td>${fieldValue(bean: profesorInstance, field: "correoElectronico")}</td>
 					
 						<td>${fieldValue(bean: profesorInstance, field: "nivel")}</td>
-					
-						<td>${fieldValue(bean: profesorInstance, field: "dias")}</td>
 					
 					</tr>
 				</g:each>

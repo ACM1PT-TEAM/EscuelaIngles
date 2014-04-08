@@ -86,14 +86,14 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${profesorInstance?.password}">
+				<!--<g:if test="${profesorInstance?.password}">
 				<li class="fieldcontain">
 					<span id="password-label" class="property-label"><g:message code="profesor.password.label" default="Password" /></span>
 					
 						<span class="property-value" aria-labelledby="password-label"><g:fieldValue bean="${profesorInstance}" field="password"/></span>
 					
 				</li>
-				</g:if>
+				</g:if>-->
 			
 				<g:if test="${profesorInstance?.usuario}">
 				<li class="fieldcontain">

@@ -46,8 +46,12 @@ class Profesor
         return horarios
     }
     
+    String toStringV1()
+    {
+         return "${nombre} ${apellidoPaterno} ${apellidoMaterno}"
+    }
     String toString()
     {
-        return "${nombre} ${apellidoPaterno} ${apellidoMaterno}"
+        return "${nombre} ${apellidoPaterno} ${apellidoMaterno}\n${horarios}\n ${dias}" 
     }
 }

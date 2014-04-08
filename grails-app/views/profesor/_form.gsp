@@ -48,14 +48,14 @@
                 <br/>
                 <span style="font-size:smaller"style="font-style:italic">(Deje presionado 'ctrl' para seleccionar más de una opción)</span>
 	</label>
-	 <select name="dias" multiple="true">
-            <option value="lunes">Lunes</option>
-            <option value="martes">Martes</option>
-            <option value="miercoles">Miercoles</option>
-            <option value="jueves">Jueves</option>
-            <option value="viernes">Viernes</option>
-            <option value="sabado">Sabado</option>
-            <option value="domingo">Domingo</option>
+	  <select name="dias" multiple="true">
+            <option value="lunes">lunes</option>
+            <option value="martes">martes</option>
+            <option value="miercoles">miercoles</option>
+            <option value="jueves">jueves</option>
+            <option value="viernes">viernes</option>
+            <option value="sabado">sabado</option>
+            <option value="domingo">domingo</option>
         </select>
 </div>
 
@@ -73,7 +73,7 @@
             <option value="13:00-15:00">13:00-15:00</option>
             <option value="15:00-17:00">15:00-17:00</option>
             <option value="17:00-19:00">17:00-19:00</option>
-            <option value="19:00-21:00">19:00-21:00f</option>
+            <option value="19:00-21:00">19:00-21:00</option>
         </select>
 </div>
 

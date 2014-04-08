@@ -46,11 +46,11 @@
 					
                                                 <td>${cursoInstance?.profesor?.nivel}</td>
                                                 
-						<td>${fieldValue(bean: cursoInstance, field: "profesor")}</td>
+						<td>${cursoInstance?.profesor?.toStringV1()}</td>
                          
-                                                <td>${cursoInstance?.profesor?.horarios}</td>
+                                                <td>${cursoInstance?.horario}</td>
                                                 
-                                                <td>${cursoInstance?.profesor?.dias}</td>
+                                                <td>${cursoInstance?.dias}</td>
 				
 					</tr>
 				</g:each>
