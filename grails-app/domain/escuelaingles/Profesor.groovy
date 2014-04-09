@@ -23,35 +23,16 @@ class Profesor
         apellidoMaterno(blank:false, nullable:false)
         correoElectronico(blank:false, nullable:false,email:true,unique:true)
         nivel(inList:["I","II","III","IV","V","VI"], blanck:false, nullable:false)
-        dias(size:15..100,blank:false, nullable:false)
-        horarios(size:15..100, blanck:false, nullable:false)
+        dias(size:5..100,blank:false, nullable:false)
+        horarios(size:5..100, blanck:false, nullable:false)
         password (size:8..12,blank:false,password:true)
         usuario(size: 5..15, blank:false, unique:true)
         video (blank:false,nullable:false)//,url:true)
         constancia (black:false,nullable:false)//,url:true)
     }
     
-    String getNivel()
-    {
-        return nivel
-    }
-    
-    String getDias()
-    {
-        return dias
-    }
-    
-    String getHorarios()
-    {
-        return horarios
-    }
-    
     String toStringV1()
     {
          return "${nombre} ${apellidoPaterno} ${apellidoMaterno}"
-    }
-    String toString()
-    {
-        return "${nombre} ${apellidoPaterno} ${apellidoMaterno}\n${horarios}\n ${dias}" 
     }
 }

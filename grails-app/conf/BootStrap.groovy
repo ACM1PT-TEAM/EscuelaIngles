@@ -9,15 +9,15 @@ class BootStrap {
         servletContext ->
         def prof1 = new Profesor
             (
-                nombre:"Alfonso",
-                apellidoPaterno:"Garcia",
-                apellidoMaterno:"Juarez",
-                correoElectronico:"alfonsoGJ@gmail.com",
+                nombre:"Edward",
+                apellidoPaterno:"Cullen",
+                apellidoMaterno:"Avendaño",
+                correoElectronico:"eca@gmail.com",
                 video:"URL:/Docs/video.mp4",
                 nivel:"III",
                 constancia:"URL:/Docs/constancia.mp4",
-                password:"perroFeo",
-                usuario:"elMasCapo",
+                password:"elmascapo",
+                usuario:"edwardCullen",
                 dias:"lunes,martes,viernes",
                 horarios:"7:00-9:00,9:00-11:00"
             )
@@ -46,7 +46,9 @@ class BootStrap {
         def curso1 = new Curso
             (
                  nombreCurso:"Ingles",
-                 aceptado:"No Aceptado",
+                 aceptado:"Aceptado",
+                 dias:"lunes,martes,viernes",
+                 horario:"7:00-9:00",
                  profesor:prof1
             )
             curso1.save()

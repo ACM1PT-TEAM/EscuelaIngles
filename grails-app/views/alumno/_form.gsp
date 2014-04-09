@@ -39,15 +39,15 @@
 		<g:message code="alumno.telefono.label" default="Telefono" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="telefono" required="" value="telefono"/>
+	<g:textField name="telefono" required="" value=" "/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: alumnoInstance, field: 'aprobado', 'error')} ">
 	<label for="aprobado">
 		<g:message code="alumno.aprobado.label" default="Aprobado" />
-		
+		<span class="required-indicator">*</span>
 	</label>
-	<g:select name="aprobado" from="${alumnoInstance.constraints.aprobado.inList}" value="${alumnoInstance?.aprobado}" valueMessagePrefix="alumno.aprobado" noSelection="['': '']"/>
+        <g:select name="aprobado" from="${alumnoInstance.constraints.aprobado.inList}" value="${alumnoInstance?.aprobado}" valueMessagePrefix="alumno.aprobado" noSelection="['': 'CURSANDO']"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: alumnoInstance, field: 'password', 'error')} required">
