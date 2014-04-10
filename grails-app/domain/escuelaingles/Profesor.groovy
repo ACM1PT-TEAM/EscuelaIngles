@@ -35,4 +35,11 @@ class Profesor
     {
          return "${nombre} ${apellidoPaterno} ${apellidoMaterno}"
     }
+    
+    String toString()
+    {
+         return "${nombre} ${apellidoPaterno} ${apellidoMaterno}"+\
+                "\n${dias}"+"\n${horarios}"
+    }
+   
 }

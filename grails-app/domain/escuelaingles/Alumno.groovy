@@ -6,6 +6,7 @@ class Alumno
     String apellidoPaterno
     String apellidoMaterno
     String correoElectronico
+    short calificacion
     String telefono
     String aprobado
     String password
@@ -20,7 +21,7 @@ class Alumno
         apellidoMaterno(blank:false, nullable:false)
         correoElectronico(blank:false, nullable:false, email:true,unique:true)
         telefono(blank:false, nullable:false)
-        password(blank:false, nullable:false,password:true)
+        password(size:8..12,blank:false, nullable:false,password:true)
         aprobado(inList:["APROBADO","NO APROBADO","CURSANDO"])
         usuario(blank:false, nullable:false,unique:true)
     }

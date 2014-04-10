@@ -5,7 +5,7 @@
 <div class="fieldcontain ${hasErrors(bean: cursoInstance, field: 'nombreCurso', 'error')} ">
 	<label for="nombreCurso">
 		<g:message code="curso.nombreCurso.label" default="Nombre Curso" />
-		
+		<span class="required-indicator">*</span>
 	</label>
 	<g:select name="nombreCurso" from="${cursoInstance.constraints.nombreCurso.inList}" value="${cursoInstance?.nombreCurso}" valueMessagePrefix="curso.nombreCurso" noSelection="['': '']"/>
 </div>
@@ -15,13 +15,15 @@
 		<g:message code="curso.profesor.label" default="Profesor" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="profesor" name="profesor.id" from="${escuelaingles.Profesor.list()}" optionKey="id" required="" value=" (${cursoInstance?.profesor?.horarios}) (${cursoInstance?.profesor?.dias})" class="many-to-one"/>
+	<g:select id="profesor" name="profesor.id" from="${escuelaingles.Profesor.list()}" optionKey="id" required="" value="${cursoInstance?.profesor?.id}" class="many-to-one"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: cursoInstance, field: 'dias', 'error')} ">
 	<label for="dias">
 		<g:message code="curso.dias.label" default="Dias" />
-		
+		<span class="required-indicator">*</span>
+                <br/>
+                <span style="font-size:smaller"style="font-style:italic">(Deje presionado 'ctrl' para seleccionar más de una opción)</span>
 	</label>
 	<select name="dias" multiple="true">
             <option value="lunes">lunes</option>
@@ -37,7 +39,7 @@
 <div class="fieldcontain ${hasErrors(bean: cursoInstance, field: 'horario', 'error')} ">
 	<label for="horario">
 		<g:message code="curso.horario.label" default="Horario" />
-		
+		<span class="required-indicator">*</span>
 	</label>
 	<g:select name="horario" from="${cursoInstance.constraints.horario.inList}" value="${cursoInstance?.horario}" valueMessagePrefix="curso.horario" noSelection="['': '']"/>
 </div>
@@ -45,7 +47,7 @@
 <div class="fieldcontain ${hasErrors(bean: cursoInstance, field: 'aceptado', 'error')} ">
 	<label for="aceptado">
 		<g:message code="curso.aceptado.label" default="Aceptado" />
-		
+		<span class="required-indicator">*</span>
 	</label>
 	<g:select name="aceptado" from="${cursoInstance.constraints.aceptado.inList}" value="${cursoInstance?.aceptado}" valueMessagePrefix="curso.aceptado" noSelection="['': '']"/>
 </div>

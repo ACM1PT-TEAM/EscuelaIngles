@@ -54,6 +54,8 @@
 	<label for="password">
 		<g:message code="alumno.password.label" default="Password" />
 		<span class="required-indicator">*</span>
+                <br/>
+                <span style="font-size:smaller"style="font-style:italic">Min. 8 caractéres Max. 12 caractéres</span>
 	</label>
 	<g:field type="password" name="password" required="" value="${alumnoInstance?.password}"/>
 </div>
@@ -62,6 +64,8 @@
 	<label for="usuario">
 		<g:message code="alumno.usuario.label" default="Usuario" />
 		<span class="required-indicator">*</span>
+                <br/>
+                <span style="font-size:smaller"style="font-style:italic">Min. 5 caractéres Max. 15 caractéres</span>
 	</label>
 	<g:textField name="usuario" required="" value="${alumnoInstance?.usuario}"/>
 </div>
