@@ -31,7 +31,7 @@
 		<g:message code="alumno.correoElectronico.label" default="Correo Electronico" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field type="email" name="correoElectronico" required="" value="example@dominio.com"  style="font-style:italic" style="font-size:smaller"/>
+	<g:field type="email" name="correoElectronico" required="" value="example@dominio.com"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: alumnoInstance, field: 'telefono', 'error')} required">
@@ -42,32 +42,41 @@
 	<g:textField name="telefono" required="" value=" "/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: alumnoInstance, field: 'aprobado', 'error')} ">
-	<label for="aprobado">
-		<g:message code="alumno.aprobado.label" default="Aprobado" />
-		<span class="required-indicator">*</span>
-	</label>
-        <g:select name="aprobado" from="${alumnoInstance.constraints.aprobado.inList}" value="${alumnoInstance?.aprobado}" valueMessagePrefix="alumno.aprobado" noSelection="['': 'CURSANDO']"/>
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: alumnoInstance, field: 'password', 'error')} required">
 	<label for="password">
 		<g:message code="alumno.password.label" default="Password" />
 		<span class="required-indicator">*</span>
-                <br/>
-                <span style="font-size:smaller"style="font-style:italic">Min. 8 caractéres Max. 12 caractéres</span>
 	</label>
-	<g:field type="password" name="password" required="" value="${alumnoInstance?.password}"/>
+	<g:field type="password" name="password" maxlength="12" required="" value="${alumnoInstance?.password}"/>
+        <br/>
+        <span style="font-size:smaller"style="font-style:italic">Min. 8 caractéres Max. 12 caractéres</span>
 </div>
+
 
 <div class="fieldcontain ${hasErrors(bean: alumnoInstance, field: 'usuario', 'error')} required">
 	<label for="usuario">
 		<g:message code="alumno.usuario.label" default="Usuario" />
 		<span class="required-indicator">*</span>
-                <br/>
-                <span style="font-size:smaller"style="font-style:italic">Min. 5 caractéres Max. 15 caractéres</span>
+                 <br/>
+                <span style="font-size:smaller" style="font-style:italic">Min. 5 caractéres Max. 15 caractéres</span>
 	</label>
 	<g:textField name="usuario" required="" value="${alumnoInstance?.usuario}"/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: alumnoInstance, field: 'aprobado', 'error')} ">
+	<label for="aprobado">
+		<g:message code="alumno.aprobado.label" default="Aprobado" />
+		
+	</label>
+	<g:select name="aprobado" from="${alumnoInstance.constraints.aprobado.inList}" value="CURSANDO" valueMessagePrefix="alumno.aprobado" noSelection="['': '']"/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: alumnoInstance, field: 'calificacion', 'error')} ">
+	<label for="calificacion">
+		<g:message code="alumno.calificacion.label" default="Calificacion" />
+		
+	</label>
+	<g:select name="calificacion" from="${alumnoInstance.constraints.calificacion.inList}" value="Sin calificacion" valueMessagePrefix="alumno.calificacion" noSelection="['': 'Sin calificacion']" disabled=""/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: alumnoInstance, field: 'curso', 'error')} required">

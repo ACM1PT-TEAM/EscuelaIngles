@@ -68,20 +68,29 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${alumnoInstance?.aprobado}">
-				<li class="fieldcontain">
-					<span id="aprobado-label" class="property-label"><g:message code="alumno.aprobado.label" default="Aprobado" /></span>
-					
-						<span class="property-value" aria-labelledby="aprobado-label"><g:fieldValue bean="${alumnoInstance}" field="aprobado"/></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${alumnoInstance?.password}">
 				<li class="fieldcontain">
 					<span id="password-label" class="property-label"><g:message code="alumno.password.label" default="Password" /></span>
 					
 						<span class="property-value" aria-labelledby="password-label"><g:fieldValue bean="${alumnoInstance}" field="password"/></span>
+					
+				</li>
+				</g:if>
+			
+				<!--<g:if test="${alumnoInstance?.aprobado}">
+				<li class="fieldcontain">
+					<span id="aprobado-label" class="property-label"><g:message code="alumno.aprobado.label" default="Aprobado" /></span>
+					
+						<span class="property-value" aria-labelledby="aprobado-label"><g:fieldValue bean="${alumnoInstance}" field="aprobado"/></span>
+					
+				</li>-->
+				</g:if>
+			
+				<g:if test="${alumnoInstance?.calificacion}">
+				<li class="fieldcontain">
+					<span id="calificacion-label" class="property-label"><g:message code="alumno.calificacion.label" default="Calificacion" /></span>
+					
+						<span class="property-value" aria-labelledby="calificacion-label"><g:fieldValue bean="${alumnoInstance}" field="calificacion"/></span>
 					
 				</li>
 				</g:if>

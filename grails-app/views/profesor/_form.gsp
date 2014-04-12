@@ -92,7 +92,7 @@
 		<g:message code="profesor.usuario.label" default="Usuario" />
 		<span class="required-indicator">*</span>
                  <br/>
-                <span style="font-size:smaller"style="font-style:italic">Min. 5 caractéres Max. 15 caractéres</span>
+                <span style="font-size:smaller" style="font-style:italic">Min. 5 caractéres Max. 15 caractéres</span>
 	</label>
 	<g:textField name="usuario" maxlength="15" required="" value="${profesorInstance?.usuario}"/>
 </div>

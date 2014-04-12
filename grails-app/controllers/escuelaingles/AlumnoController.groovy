@@ -34,7 +34,7 @@ class AlumnoController {
             respond alumnoInstance.errors, view:'create'
             return
         }
-
+        
         alumnoInstance.save flush:true
 
         request.withFormat {
