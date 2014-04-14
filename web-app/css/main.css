@@ -11,8 +11,8 @@ h1, h2, h3, h4, h5, h6 {
 /* BASE LAYOUT */
 
 html {
-	background-color: #3F8FC4;
-	background-image: -moz-linear-gradient(center top, #aaa, #ddd);
+	background-color: #55A2D5;
+	background-image: -moz-linear-gradient(center top, #0664A2, #55A2D5);
 	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #aaa), color-stop(1, #ddd));
 	background-image: linear-gradient(top, #aaa, #ddd);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr = '#aaaaaa', EndColorStr = '#dddddd');
