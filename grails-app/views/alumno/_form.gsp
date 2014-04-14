@@ -60,7 +60,7 @@
                  <br/>
                 <span style="font-size:smaller" style="font-style:italic">Min. 5 caractéres Max. 15 caractéres</span>
 	</label>
-	<g:textField name="usuario" required="" value="${alumnoInstance?.usuario}"/>
+	<g:textField name="usuario"maxlength="15"required="" value="${alumnoInstance?.usuario}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: alumnoInstance, field: 'aprobado', 'error')} ">
@@ -76,7 +76,7 @@
 		<g:message code="alumno.calificacion.label" default="Calificacion" />
 		
 	</label>
-	<g:select name="calificacion" from="${alumnoInstance.constraints.calificacion.inList}" value="Sin calificacion" valueMessagePrefix="alumno.calificacion" noSelection="['': 'Sin calificacion']" disabled=""/>
+	<g:select name="calificacion" from="${alumnoInstance.constraints.calificacion.inList}" value="Sin calificacion" valueMessagePrefix="alumno.calificacion" noSelection="['': '']" disabled=""/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: alumnoInstance, field: 'curso', 'error')} required">

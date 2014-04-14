@@ -67,7 +67,7 @@
 					
 				</li>
 				</g:if>
-      
+			
 				<g:if test="${cursoInstance?.alumnos}">
 				<li class="fieldcontain">
 					<span id="alumnos-label" class="property-label"><g:message code="curso.alumnos.label" default="Alumnos" /></span>

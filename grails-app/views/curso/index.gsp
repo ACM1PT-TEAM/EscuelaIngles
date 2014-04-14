@@ -26,16 +26,14 @@
 					
 						<g:sortableColumn property="nombreCurso" title="${message(code: 'curso.nombreCurso.label', default: 'Nombre Curso')}" />
 					
-						<th>Nivel</th>
-					
 						<th><g:message code="curso.profesor.label" default="Profesor" /></th>
 					
-                                                <th>Horarios</th>
-                                                
-                                                <th>Dias</th>
-                                                
-                                                <th>Video</th>
-
+						<g:sortableColumn property="dias" title="${message(code: 'curso.dias.label', default: 'Dias')}" />
+					
+						<g:sortableColumn property="horario" title="${message(code: 'curso.horario.label', default: 'Horario')}" />
+					
+						
+					
 					</tr>
 				</thead>
 				<tbody>
@@ -44,14 +42,14 @@
 					
 						<td><g:link action="show" id="${cursoInstance.id}">${fieldValue(bean: cursoInstance, field: "nombreCurso")}</g:link></td>
 					
-                                                <td>${cursoInstance?.profesor?.nivel}</td>
-                                                
 						<td>${cursoInstance?.profesor?.toStringV1()}</td>
-                         
-                                                <td>${cursoInstance?.horario}</td>
-                                                
-                                                <td>${cursoInstance?.dias}</td>
-				
+					
+						<td>${fieldValue(bean: cursoInstance, field: "dias")}</td>
+					
+						<td>${fieldValue(bean: cursoInstance, field: "horario")}</td>
+					
+						<td>${fieldValue(bean: cursoInstance, field: "aceptado")}</td>
+					
 					</tr>
 				</g:each>
 				</tbody>

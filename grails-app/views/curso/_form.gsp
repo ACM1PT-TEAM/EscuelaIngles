@@ -21,11 +21,11 @@
 <div class="fieldcontain ${hasErrors(bean: cursoInstance, field: 'dias', 'error')} ">
 	<label for="dias">
 		<g:message code="curso.dias.label" default="Dias" />
-		<span class="required-indicator">*</span>
-                <br/>
+                <span class="required-indicator">*</span>
+		<br/>
                 <span style="font-size:smaller"style="font-style:italic">(Deje presionado 'ctrl' para seleccionar más de una opción)</span>
 	</label>
-	<select name="dias" multiple="true">
+         <select name="dias" multiple="true">
             <option value="lunes">lunes</option>
             <option value="martes">martes</option>
             <option value="miercoles">miercoles</option>
@@ -34,6 +34,7 @@
             <option value="sabado">sabado</option>
             <option value="domingo">domingo</option>
         </select>
+	
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: cursoInstance, field: 'horario', 'error')} ">
@@ -52,20 +53,20 @@
 	<g:select name="aceptado" from="${cursoInstance.constraints.aceptado.inList}" value="${cursoInstance?.aceptado}" valueMessagePrefix="curso.aceptado" noSelection="['': '']"/>
 </div>
 
-<!--<div class="fieldcontain ${hasErrors(bean: cursoInstance, field: 'alumnos', 'error')} ">
+<div class="fieldcontain ${hasErrors(bean: cursoInstance, field: 'alumnos', 'error')} ">
 	<label for="alumnos">
 		<g:message code="curso.alumnos.label" default="Alumnos" />
 		
 	</label>
 	
 <ul class="one-to-many">
-<g:each in="${cursoInstance?.alumnos?.id}" var="a">
-    <li><g:link controller="alumno" action="show" id="${a.id}">${a?.encodeAsHTML()}</g:link></li>
+<g:each in="${cursoInstance.alumnos}" var="a">
+    <g:link controller="alumno" action="show" id="${a.id}">${a?.encodeAsHTML()}<br/></g:link>
 </g:each>
 <li class="add">
 <g:link controller="alumno" action="create" params="['curso.id': cursoInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'alumno.label', default: 'Alumno')])}</g:link>
 </li>
 </ul>
 
-</div>-->
+</div>
 
