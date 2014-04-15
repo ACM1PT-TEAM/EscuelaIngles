@@ -32,15 +32,6 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${cursoInstance?.profesor}">
-				<li class="fieldcontain">
-					<span id="profesor-label" class="property-label"><g:message code="curso.profesor.label" default="Profesor" /></span>
-					
-						<span class="property-value" aria-labelledby="profesor-label"><g:link controller="profesor" action="show" id="${cursoInstance?.profesor?.id}">${cursoInstance?.profesor?.toStringV1()}</g:link></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${cursoInstance?.dias}">
 				<li class="fieldcontain">
 					<span id="dias-label" class="property-label"><g:message code="curso.dias.label" default="Dias" /></span>
@@ -75,6 +66,15 @@
 						<g:each in="${cursoInstance.alumnos}" var="a">
 						<span class="property-value" aria-labelledby="alumnos-label"><g:link controller="alumno" action="show" id="${a.id}">${a?.encodeAsHTML()}</g:link></span>
 						</g:each>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${cursoInstance?.prof}">
+				<li class="fieldcontain">
+					<span id="prof-label" class="property-label"><g:message code="curso.prof.label" default="Prof" /></span>
+					
+						<span class="property-value" aria-labelledby="prof-label"><g:link controller="profesor" action="show" id="${cursoInstance?.prof?.id}">${cursoInstance?.prof?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>

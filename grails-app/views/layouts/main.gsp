@@ -19,11 +19,10 @@
 		<r:layoutResources />
 	</head>
 	<body>
-            <div id="grailsLogo" role="banner">
+            <div id="logo" role="banner">
                 <a href="${createLink(uri: '/')}">
-                    <center>
-                        <img src="${resource(dir: 'images', file: 'EscuelaIngles.png')}" alt="Grails"/>
-                    </center>
+                        <img src="${resource(dir: 'images', file: 'EscuelaInglesLogo2.png')}" alt="Escuela de Ingles"/>
+                        <g:loginToggle />
                 </a>
             </div>
 		<g:layoutBody/>

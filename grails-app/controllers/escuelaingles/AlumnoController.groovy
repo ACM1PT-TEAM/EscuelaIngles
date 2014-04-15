@@ -91,6 +91,26 @@ class AlumnoController {
             '*'{ render status: NO_CONTENT }
         }
     }
+    
+    def login() {
+    }
+    
+    def logout = {
+        session.alumno = null
+        redirect(uri:'/')
+    }
+    
+    def validate() {
+        def alumno = Alumno.findByUsuario(params.usuario)
+        if (alumno && alumno.password == params.password){
+            session.alumno = alumno
+            redirect controller:'Alumno', action:'index'
+        }
+        else{
+            flash.message = "Nombre de usuario o Contraseña no valida."
+            render view:'login'
+        }
+    }
 
     protected void notFound() {
         request.withFormat {

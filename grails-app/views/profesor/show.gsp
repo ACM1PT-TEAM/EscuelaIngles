@@ -86,15 +86,6 @@
 				</li>
 				</g:if>
 			
-				<!--<g:if test="${profesorInstance?.password}">
-				<li class="fieldcontain">
-					<span id="password-label" class="property-label"><g:message code="profesor.password.label" default="Password" /></span>
-					
-						<span class="property-value" aria-labelledby="password-label"><g:fieldValue bean="${profesorInstance}" field="password"/></span>
-					
-				</li>
-				</g:if>-->
-			
 				<g:if test="${profesorInstance?.usuario}">
 				<li class="fieldcontain">
 					<span id="usuario-label" class="property-label"><g:message code="profesor.usuario.label" default="Usuario" /></span>
@@ -104,11 +95,18 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${profesorInstance?.password}">
+				<li class="fieldcontain">
+					<span id="password-label" class="property-label"><g:message code="profesor.password.label" default="Password" /></span>
+					
+						<span class="property-value" aria-labelledby="password-label"><g:fieldValue bean="${profesorInstance}" field="password"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${profesorInstance?.video}">
 				<li class="fieldcontain">
 					<span id="video-label" class="property-label"><g:message code="profesor.video.label" default="Video" /></span>
-					
-						<span class="property-value" aria-labelledby="video-label"><g:fieldValue bean="${profesorInstance}" field="video"/></span>
 					
 				</li>
 				</g:if>
@@ -116,8 +114,6 @@
 				<g:if test="${profesorInstance?.constancia}">
 				<li class="fieldcontain">
 					<span id="constancia-label" class="property-label"><g:message code="profesor.constancia.label" default="Constancia" /></span>
-					
-						<span class="property-value" aria-labelledby="constancia-label"><g:fieldValue bean="${profesorInstance}" field="constancia"/></span>
 					
 				</li>
 				</g:if>

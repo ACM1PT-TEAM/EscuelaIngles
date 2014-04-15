@@ -6,9 +6,9 @@ class Profesor
     String apellidoPaterno
     String apellidoMaterno
     String correoElectronico
-    String video
+    byte[] video
     String nivel
-    String constancia
+    byte[] constancia
     String password
     String usuario
     String dias
@@ -18,17 +18,17 @@ class Profesor
 
     static constraints = 
     {
-        nombre(blank:false, nullable:false)
-        apellidoPaterno(blank:false, nullable:false)
-        apellidoMaterno(blank:false, nullable:false)
-        correoElectronico(blank:false, nullable:false,email:true,unique:true)
-        nivel(inList:["I","II","III","IV","V","VI"], blanck:false, nullable:false)
-        dias(size:5..100,blank:false, nullable:false)
-        horarios(size:5..100, blanck:false, nullable:false)
-        password (size:8..12,blank:false,password:true)
-        usuario(size: 5..15, blank:false, unique:true)
-        video (blank:false,nullable:false)//,url:true)
-        constancia (black:false,nullable:false)//,url:true)
+        nombre blank:false, nullable:false
+        apellidoPaterno blank:false, nullable:false 
+        apellidoMaterno blank:false, nullable:false 
+        correoElectronico blank:false, nullable:false,email:true,unique:true
+        nivel inList:["I","II","III","IV","V","VI"], blanck:false, nullable:false
+        dias size:5..100,blank:false, nullable:false
+        horarios size:5..100, blank:false, nullable:false
+        usuario size: 5..15, blank:false, unique:true
+        password size:8..12,blank:false,password:true
+        video nullable:true, maxSize: 1000000//,url:true)
+        constancia nullable:true, maxSize: 1000000//,url:true)
     }
     
     String toStringV1()

@@ -1,8 +1,11 @@
 dataSource {
     pooled = true
-    driverClassName = "org.postgresql.Driver"
-    username = "postgres"
-    password = "acm1ptmoy"
+    driverClassName = "org.h2.Driver"
+    username = "sa"
+    password = ""
+    //driverClassName = "org.postgresql.Driver"
+    //username = "postgres"
+    //password = "acm1ptmoy"
 }
 hibernate {
     cache.use_second_level_cache = true
@@ -15,20 +18,26 @@ hibernate {
 environments {
     development {
         dataSource {
-            dbCreate = "update" // one of 'create', 'create-drop', 'update', 'validate', ''
-            url = "jdbc:postgresql://localhost:5432/EscuelaIngles"
+            //Quite la conexion a la base solo para probar los bootstrap
+            dbCreate = "create-drop" // one of 'create', 'create-drop','update', 'validate', ''
+            url = "jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
+            
+            //dbCreate = "update" // one of 'create', 'create-drop', 'update', 'validate', ''
+            //url = "jdbc:postgresql://localhost:5432/EscuelaIngles"
         }
     }
     test {
         dataSource {
             dbCreate = "update"
-            url = "jdbc:postgresql://localhost:5432/EscuelaIngles_test"
+            url = "jdbc:h2:mem:testDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
+            //url = "jdbc:postgresql://localhost:5432/EscuelaIngles_test"
         }
     }
     production {
         dataSource {
             dbCreate = "update"
-            url = "jdbc:postgresql://localhost:5432/EscuelaIngles_prod"
+            url = "jdbc:h2:prodDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
+            //url = "jdbc:postgresql://localhost:5432/EscuelaIngles_prod"
           properties {
                maxActive = -1
                minEvictableIdleTimeMillis=1800000
