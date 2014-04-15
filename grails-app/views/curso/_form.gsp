@@ -34,19 +34,19 @@
 	<g:select name="aceptado" from="${cursoInstance.constraints.aceptado.inList}" required="" value="${cursoInstance?.aceptado}" valueMessagePrefix="curso.aceptado"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: cursoInstance, field: 'alumnos', 'error')} ">
-	<label for="alumnos">
-		<g:message code="curso.alumnos.label" default="Alumnos" />
-		
-	</label>
-	<g:select name="alumnos" from="${escuelaingles.Alumno.list()}" multiple="multiple" optionKey="id" size="5" value="${cursoInstance?.alumnos*.id}" class="many-to-many"/>
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: cursoInstance, field: 'prof', 'error')} required">
 	<label for="prof">
 		<g:message code="curso.prof.label" default="Prof" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:select id="prof" name="prof.id" from="${escuelaingles.Profesor.list()}" optionKey="id" required="" value="${cursoInstance?.prof?.id}" class="many-to-one"/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: cursoInstance, field: 'alumnos', 'error')} ">
+	<label for="alumnos">
+		<g:message code="curso.alumnos.label" default="Alumnos" />
+		
+	</label>
+	<g:select name="alumnos" from="${escuelaingles.Alumno.list()}" multiple="multiple" optionKey="id" size="5" value="${cursoInstance?.alumnos*.id}" class="many-to-many"/>
 </div>
 

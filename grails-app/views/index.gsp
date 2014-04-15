@@ -1,114 +1,39 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta name="layout" content="main"/>
-		<title>Welcome to Grails</title>
-		<style type="text/css" media="screen">
-			#status {
-				background-color: #eee;
-				border: .2em solid #fff;
-				margin: 2em 2em 1em;
-				padding: 1em;
-				width: 12em;
-				float: left;
-				-moz-box-shadow: 0px 0px 1.25em #ccc;
-				-webkit-box-shadow: 0px 0px 1.25em #ccc;
-				box-shadow: 0px 0px 1.25em #ccc;
-				-moz-border-radius: 0.6em;
-				-webkit-border-radius: 0.6em;
-				border-radius: 0.6em;
-			}
-
-			.ie6 #status {
-				display: inline; /* float double margin fix http://www.positioniseverything.net/explorer/doubled-margin.html */
-			}
-
-			#status ul {
-				font-size: 0.9em;
-				list-style-type: none;
-				margin-bottom: 0.6em;
-				padding: 0;
-			}
-
-			#status li {
-				line-height: 1.3;
-			}
-
-			#status h1 {
-				text-transform: uppercase;
-				font-size: 1.1em;
-				margin: 0 0 0.3em;
-			}
-
-			#page-body {
-				margin: 2em 1em 1.25em 18em;
-			}
-
-			h2 {
-				margin-top: 1em;
-				margin-bottom: 0.3em;
-				font-size: 1em;
-			}
-
-			p {
-				line-height: 1.5;
-				margin: 0.25em 0;
-			}
-
-			#controller-list ul {
-				list-style-position: inside;
-			}
-
-			#controller-list li {
-				line-height: 1.3;
-				list-style-position: inside;
-				margin: 0.25em 0;
-			}
-
-			@media screen and (max-width: 480px) {
-				#status {
-					display: none;
-				}
-
-				#page-body {
-					margin: 0 1em 1em;
-				}
-
-				#page-body h1 {
-					margin-top: 0;
-				}
-			}
-		</style>
-	</head>
-	<body>
-		<a href="#page-body" class="skip"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div id="status" role="complementary">
-			<h1>Menu Principal</h1>
-			<ul>
-				<li href="main.gsp">Principal </li>
-				
-			</ul>
-			<h1>Alumnos</h1>
-			<ul>
-				<li href="">Cursos</li>
-			</ul>
-                        <h1>Profesores</h1>
-                        <ul>
-                                <li href="">Postularse</li>
-                        </ul>
-		</div>
-		<div id="page-body" role="main">
-			<h1>Welcome to Grails</h1>
-			<p>Comentarios de pagina de inicio</p>
-
-			<div id="controller-list" role="navigation">
-				<h2>Available Controllers:</h2>
-				<ul>
-					<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
-						<li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
-					</g:each>
-				</ul>
-			</div>
-		</div>
-	</body>
+  <head>
+    <meta name="layout" content="main"/>
+    <title>Escuela de Ingles</title>
+  </head>
+  <body>
+    <div id="welcome">
+      <br />
+      <h3>Bienvenidos a la Escuela de Ingles ACM1</h3>
+      <p>La escuela de Ingles ACM1 ofrece una amplia variedad de cursos de ingles
+      para todas las edades y en una gran variedad de horarios, asimismo contamos
+      con profesor certificados para impartir los cursos.</p>
+    </div>
+    <div class="homeCell">
+      <h3>Consulta Cursos</h3>
+      <p> Comprueba si hay un curso que se acomode a tu horario y necesidades.</p>
+      <span class="buttons" >
+        <g:link controller="curso" action="index">Consultar Cursos</g:link>
+      </span>
+    </div>
+    <div class="homeCell">
+      <h3>Postularse como Profesor</h3>
+      <p>Si estas interesado en impartir clases y ademas cuentas con la experiencia
+    necesaria no dudes en postularte como profesor.</p>
+      <span class="buttons" >
+        <g:link controller="profesor" action="create"> Postularse como Profesor</g:link>
+      </span>
+    </div>
+    <div class="homeCell">
+      <h3>Registrarte</h3> 
+      <p>Si estas interesado en involucrarte mas en los cursos tenemos la opcion
+        de que te puedas registrar y posteriormente inscribirte a un curso.</p>
+      <span class="buttons" >
+        <g:link controller="alumno" action="create">Registrarse</g:link>
+      </span>
+    </div>
+  </body>
 </html>

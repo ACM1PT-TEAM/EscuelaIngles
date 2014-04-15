@@ -12,8 +12,6 @@ class Alumno
     String password
     String usuario
     
-     static belongsTo = Curso
-    
     static constraints = 
     {
         nombre blank:false, nullable:false

@@ -22,13 +22,14 @@ class Profesor
         apellidoPaterno blank:false, nullable:false 
         apellidoMaterno blank:false, nullable:false 
         correoElectronico blank:false, nullable:false,email:true,unique:true
-        nivel inList:["I","II","III","IV","V","VI"], blanck:false, nullable:false
+        nivel inList:["I","II","III","IV","V","VI"], blank:false, nullable:false
         dias size:5..100,blank:false, nullable:false
         horarios size:5..100, blank:false, nullable:false
         usuario size: 5..15, blank:false, unique:true
         password size:8..12,blank:false,password:true
         video nullable:true, maxSize: 1000000//,url:true)
         constancia nullable:true, maxSize: 1000000//,url:true)
+        cursos nullable:true
     }
     
     String toStringV1()
@@ -38,8 +39,7 @@ class Profesor
     
     String toString()
     {
-         return "${nombre} ${apellidoPaterno} ${apellidoMaterno}"+\
-                "\n${dias}"+"\n${horarios}"
+         return "${nombre} ${apellidoPaterno}"
     }
    
 }

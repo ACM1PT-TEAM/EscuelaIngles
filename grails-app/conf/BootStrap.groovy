@@ -23,14 +23,18 @@ class BootStrap {
             }
         }*/        
                 
+        println Profesor.findByUsuario('fernando28')
+        
         new Curso
         (
             nombreCurso:'Ingles',
-            aceptado:'Aceptado',
             dias:'lunes,martes,viernes',
             horario:'7:00-9:00',
-            profesor:Profesor.findByNombre('Fernando')
+            aceptado:'Aceptado',
+            prof:Profesor.findByUsuario('fernando28')
         ).save()
+        
+        println Curso.findByNombreCurso('Ingles')
         
         new Alumno(
             nombre:'Moises',
@@ -43,6 +47,8 @@ class BootStrap {
             aprobado:'APROBADO',
             calificacion:'8'
         ).save()
+        
+        println Alumno.findByNombre('Moises')
     }
 
     def destroy = 

@@ -38,7 +38,7 @@
                     <td>
                     </td>
                     <td>
-                        <input type="submit" value="login"/>
+                        <input type="submit" value="Iniciar Sesion"/>
                     </td>
                 </tr>
             </table>

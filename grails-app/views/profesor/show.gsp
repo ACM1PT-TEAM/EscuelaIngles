@@ -17,7 +17,7 @@
 			</ul>
 		</div>
 		<div id="show-profesor" class="content scaffold-show" role="main">
-			<h1><g:message code="default.show.label" args="[entityName]" /></h1>
+			<h1>${profesorInstance}</h1>
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
@@ -82,24 +82,6 @@
 					<span id="horarios-label" class="property-label"><g:message code="profesor.horarios.label" default="Horarios" /></span>
 					
 						<span class="property-value" aria-labelledby="horarios-label"><g:fieldValue bean="${profesorInstance}" field="horarios"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${profesorInstance?.usuario}">
-				<li class="fieldcontain">
-					<span id="usuario-label" class="property-label"><g:message code="profesor.usuario.label" default="Usuario" /></span>
-					
-						<span class="property-value" aria-labelledby="usuario-label"><g:fieldValue bean="${profesorInstance}" field="usuario"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${profesorInstance?.password}">
-				<li class="fieldcontain">
-					<span id="password-label" class="property-label"><g:message code="profesor.password.label" default="Password" /></span>
-					
-						<span class="property-value" aria-labelledby="password-label"><g:fieldValue bean="${profesorInstance}" field="password"/></span>
 					
 				</li>
 				</g:if>

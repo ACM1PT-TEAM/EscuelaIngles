@@ -594,3 +594,26 @@ a.skip {
 	position: absolute;
 	left: -9999px;
 }
+
+/*Index*/
+#welcome {
+    margin-left: 25px; 
+    width: 85%;
+}
+.homeCell {
+    margin-left: 25px; 
+    margin-top: 65px; 
+    width: 85%;
+}
+.homeCell .buttons {
+    width: 180px;
+    text-align: center;
+    float: right;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+h3 {
+    margin-top: 50px;
+    margin-bottom: 15px;
+}
