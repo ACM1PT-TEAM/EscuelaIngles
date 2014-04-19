@@ -23,7 +23,7 @@
                         <label for="usuario">Usuario:</label>
                     </td>
                     <td class="value">
-                        <input type="text" id="usuario" name="usuario" value="">
+                        <input type="text" id="usuario" name="usuario" value=" ">
                     </td>
                 </tr>
                 <tr class="prop">

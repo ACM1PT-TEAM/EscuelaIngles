@@ -245,6 +245,32 @@ label {
 	margin: 0 0.25em 0 0;
 }
 
+input[type=file]{
+        background-color: transparent;
+        border: 1px hidden #cccccc;
+	font-size: 1em;
+	padding: 0.2em 0.4em;
+}
+
+input[type=submit]
+{
+        background-color:  #9FBEE6;
+        border: 1px hidden #cccccc;
+	font-size: 1em;
+	padding: 0.2em 0.4em;
+}
+
+input[type=submit]:hover
+{
+        background-color: #165DBA;
+        color: #ffffff;
+	outline: none;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+	   -moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
+}
+
 input, select, textarea {
 	background-color: #fcfcfc;
 	border: 1px solid #cccccc;
@@ -275,7 +301,7 @@ input[type=checkbox], input[type=radio] {
 
 input:focus, select:focus, textarea:focus {
 	background-color: #ffffff;
-	border: 1px solid #eeeeee;
+	/*border: 1px solid #eeeeee;*/
 	outline: 0;
 	   -moz-box-shadow: 0 0 0.5em #ffffff;
 	-webkit-box-shadow: 0 0 0.5em #ffffff;
@@ -522,19 +548,19 @@ th:hover, tr:hover {
 /* ACTION BUTTONS */
 
 .buttons {
-	background-color: #efefef;
+	background-color: transparent;
 	overflow: hidden;
 	padding: 0.3em;
-	   -moz-box-shadow: 0 0 3px 1px #aaaaaa;
+	/*   -moz-box-shadow: 0 0 3px 1px #aaaaaa;
 	-webkit-box-shadow: 0 0 3px 1px #aaaaaa;
-	        box-shadow: 0 0 3px 1px #aaaaaa;
+       	        box-shadow: 0 0 3px 1px #aaaaaa;*/
 	margin: 0.1em 0 0 0;
-	border: none;
+	border: none;    
 }
 
 .buttons input,
 .buttons a {
-	background-color: transparent;
+        background-color: #9FBEE6;
 	border: 0;
 	color: #666666;
 	cursor: pointer;
@@ -542,16 +568,17 @@ th:hover, tr:hover {
 	margin: 0 0.25em 0;
 	overflow: visible;
 	padding: 0.25em 0.7em;
-	text-decoration: none;
-
-	   -moz-border-radius: 0.3em;
+	text-decoration: none;  
+        -moz-border-radius: 10px 10px 10px 10px;
 	-webkit-border-radius: 0.3em;
-	        border-radius: 0.3em;
+        border-radius: 0.3em;
+        -moz-box-shadow: 3px 3px 0px #000;
+        box-shadow: 3px 3px 0px #000;
 }
 
 .buttons input:hover, .buttons input:focus,
 .buttons a:hover, .buttons a:focus {
-	background-color: #999999;
+	background-color: #165DBA;
 	color: #ffffff;
 	outline: none;
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);

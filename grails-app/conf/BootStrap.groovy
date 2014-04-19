@@ -25,6 +25,21 @@ class BootStrap {
                 
         println Profesor.findByUsuario('fernando28')
         
+        new Profesor
+        (
+            nombre:'Edward',
+            apellidoPaterno:'Cullen',
+            apellidoMaterno:'Avendaño',
+            correoElectronico:'cullens@gmail.com',
+            nivel:'I',
+            dias:'lunes,miercoles,viernes',
+            horarios:'7:00-9:00',
+            usuario:'elmascapo',
+            password:'vampiro2000'
+        ).save()      
+                
+        println Profesor.findByUsuario('elmascapo')
+        
         new Curso
         (
             nombreCurso:'Ingles',
@@ -34,7 +49,18 @@ class BootStrap {
             prof:Profesor.findByUsuario('fernando28')
         ).save()
         
-        println Curso.findByNombreCurso('Ingles')
+        println Curso.findByProf(Profesor.findByUsuario('fernando28'));
+        
+        new Curso
+        (
+            nombreCurso:'Ingles',
+            dias:'lunes,miercoles,viernes',
+            horario:'7:00-9:00',
+            aceptado:'Aceptado',
+            prof:Profesor.findByUsuario('elmascapo')
+        ).save()
+        
+        println Curso.findByProf(Profesor.findByUsuario('elmascapo'));
         
         new Alumno(
             nombre:'Moises',
@@ -44,11 +70,25 @@ class BootStrap {
             telefono:'69696969',
             usuario:'moises28',
             password:'mascapo28',
-            aprobado:'APROBADO',
-            calificacion:'8'
+            aprobado:'CURSANDO',
+            calificacion:'Sin calificacion'
         ).save()
         
-        println Alumno.findByNombre('Moises')
+        println Alumno.findByUsuario('moises28')
+        
+        new Alumno(
+            nombre:'Benito',
+            apellidoPaterno:'Camelo',
+            apellidoMaterno:'Bueno',
+            correoElectronico:'bcbueno@gmail.com',
+            telefono:'56123456',
+            usuario:'benitoC',
+            password:'cameloBueno',
+            aprobado:'CURSANDO',
+            calificacion:'Sin calificacion'
+        ).save()
+        
+        println Alumno.findByUsuario('benitoC')
     }
 
     def destroy = 

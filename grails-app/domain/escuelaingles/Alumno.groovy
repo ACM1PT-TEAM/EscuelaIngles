@@ -8,7 +8,7 @@ class Alumno
     String correoElectronico
     String calificacion 
     String telefono
-    String aprobado// = "CURSANDO"
+    String aprobado
     String password
     String usuario
     
