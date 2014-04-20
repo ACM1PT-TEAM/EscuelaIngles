@@ -34,12 +34,12 @@
 	<g:field type="email" name="correoElectronico" required="" value="${profesorInstance?.correoElectronico}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: profesorInstance, field: 'nivel', 'error')} ">
+<div class="fieldcontain ${hasErrors(bean: profesorInstance, field: 'nivel', 'error')} required">
 	<label for="nivel">
 		<g:message code="profesor.nivel.label" default="Nivel" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select name="nivel" from="${profesorInstance.constraints.nivel.inList}" value="${profesorInstance?.nivel}" valueMessagePrefix="profesor.nivel" noSelection="['': 'I']"/>
+	<g:select name="nivel" from="${profesorInstance.constraints.nivel.inList}" required="" value="${profesorInstance?.nivel}" valueMessagePrefix="profesor.nivel"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: profesorInstance, field: 'dias', 'error')} required">
@@ -58,16 +58,16 @@
             <option value="sabado">sabado</option>
             <option value="domingo">domingo</option>
         </select>
-</div>
+    </div>
 
 <div class="fieldcontain ${hasErrors(bean: profesorInstance, field: 'horarios', 'error')} required">
 	<label for="horarios">
 		<g:message code="profesor.horarios.label" default="Horarios" />
 		<span class="required-indicator">*</span>
                 <br/>
-                <span style="font-size:smaller" style="font-style:italic">(Deje presionado 'ctrl' para seleccionar más de una opción)</span>
+                <span style="font-size:smaller"style="font-style:italic">(Deje presionado 'ctrl' para seleccionar más de una opción)</span>
 	</label>
-	<select name="horarios" multiple="true">
+        <select name="horarios" multiple="true">
             <option value="7:00-9:00">7:00-9:00</option>
             <option value="9:00-11:00">9:00-11:00</option>
             <option value="11:00-13:00">11:00-13:00</option>
@@ -76,13 +76,13 @@
             <option value="17:00-19:00">17:00-19:00</option>
             <option value="19:00-21:00">19:00-21:00</option>
         </select>
-</div>
+	</div>
 
 <div class="fieldcontain ${hasErrors(bean: profesorInstance, field: 'usuario', 'error')} required">
 	<label for="usuario">
 		<g:message code="profesor.usuario.label" default="Usuario" />
 		<span class="required-indicator">*</span>
-                 <br/>
+                <br/>
                 <span style="font-size:smaller" style="font-style:italic">Min. 5 caractéres Max. 15 caractéres</span>
 	</label>
 	<g:textField name="usuario" maxlength="15" required="" value="${profesorInstance?.usuario}"/>
@@ -101,7 +101,7 @@
 <div class="fieldcontain ${hasErrors(bean: profesorInstance, field: 'video', 'error')} ">
 	<label for="video">
 		<g:message code="profesor.video.label" default="Video" />
-		<span class="required-indicator">*</span>
+		
 	</label>
 	<input type="file" id="video" name="video" />
 </div>
@@ -109,7 +109,7 @@
 <div class="fieldcontain ${hasErrors(bean: profesorInstance, field: 'constancia', 'error')} ">
 	<label for="constancia">
 		<g:message code="profesor.constancia.label" default="Constancia" />
-		<span class="required-indicator">*</span>
+		
 	</label>
 	<input type="file" id="constancia" name="constancia" />
 </div>
@@ -121,7 +121,7 @@
 	</label>
 	
 <ul class="one-to-many">
-<g:each in="${profesorInstance.cursos}" var="c">
+<g:each in="${profesorInstance?.cursos?}" var="c">
     <li><g:link controller="curso" action="show" id="${c.id}">${c?.encodeAsHTML()}</g:link></li>
 </g:each>
 <li class="add">
