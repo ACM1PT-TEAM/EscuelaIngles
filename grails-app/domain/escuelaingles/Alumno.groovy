@@ -27,6 +27,7 @@ class Alumno
         calificacion inList:["5","6","7","8","9","10","NP","Sin calificacion"],nullable:true,blank:true
     }
     
+    
     String toString()
     {
         return "${nombre} ${apellidoPaterno} ${apellidoMaterno}"
