@@ -5,7 +5,7 @@ import escuelaingles.Alumno
 class BootStrap {
 
     def init = { servletContext ->
-        new Profesor
+        def prof1 = new Profesor
         (
             nombre:'Fernando',
             apellidoPaterno:'ACM1',
@@ -25,7 +25,7 @@ class BootStrap {
                 
         println Profesor.findByUsuario('fernando28')
         
-        new Profesor
+        def prof2 = new Profesor
         (
             nombre:'Edward',
             apellidoPaterno:'Cullen',
@@ -37,32 +37,47 @@ class BootStrap {
             usuario:'elmascapo',
             password:'vampiro2000'
         ).save()      
-                
+        /*if(!prof2.save){
+            prof2.errors.allErrors.each{error ->
+                println 'un error ocurrio con el profesor2: ${error}'
+            }
+        } */
+        
         println Profesor.findByUsuario('elmascapo')
         
-        new Curso
+        def curso1 = new Curso
         (
             nombreCurso:'Ingles',
             dias:'lunes,martes,viernes',
             horario:'7:00-9:00',
             aceptado:'Aceptado',
-            prof:Profesor.findByUsuario('fernando28')
+            profesor:prof1
         ).save()
         
-        println Curso.findByProf(Profesor.findByUsuario('fernando28'));
+        /*if(!curso1.save){
+            curso1.errors.allErrors.each{error ->
+                println 'un error ocurrio con el curso1: ${error}'
+            }
+        }*/
         
-        new Curso
+        println Curso.findByProfesor(Profesor.findByUsuario('fernando28'));
+        
+        def curso2 = new Curso
         (
             nombreCurso:'Ingles',
             dias:'lunes,miercoles,viernes',
             horario:'7:00-9:00',
             aceptado:'Aceptado',
-            prof:Profesor.findByUsuario('elmascapo')
+            profesor:prof2//Profesor.findByUsuario('elmascapo')
         ).save()
+        /*if(!curso2.save){
+            curso2.errors.allErrors.each{error ->
+                println 'un error ocurrio con el curso2: ${error}'
+            }
+        }*/
+        println Curso.findByProfesor(Profesor.findByUsuario('elmascapo'));
         
-        println Curso.findByProf(Profesor.findByUsuario('elmascapo'));
-        
-        new Alumno(
+        def alumno1 = new Alumno(
             nombre:'Moises',
             apellidoPaterno:'Mas',
             apellidoMaterno:'Caporonga',
@@ -71,12 +86,19 @@ class BootStrap {
             usuario:'moises28',
             password:'mascapo28',
             aprobado:'CURSANDO',
-            calificacion:'Sin calificacion'
+            calificacion:'Sin calificacion',
+            curso:curso1
         ).save()
+        
+        /*if(!alumno1.save){
+            alumno1.errors.allErrors.each{error ->
+                println 'un error ocurrio con el alumno1: ${error}'
+            }
+        }*/
         
         println Alumno.findByUsuario('moises28')
         
-        new Alumno(
+        def alumno2 = new Alumno(
             nombre:'Benito',
             apellidoPaterno:'Camelo',
             apellidoMaterno:'Bueno',
@@ -85,8 +107,15 @@ class BootStrap {
             usuario:'benitoC',
             password:'cameloBueno',
             aprobado:'CURSANDO',
-            calificacion:'Sin calificacion'
+            calificacion:'Sin calificacion',
+            curso:curso2
         ).save()
+        
+        /*if(!alumno2.save){
+            alumno2.errors.allErrors.each{error ->
+                println 'un error ocurrio con el alumno2: ${error}'
+            }
+        }*/
         
         println Alumno.findByUsuario('benitoC')
     }

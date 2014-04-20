@@ -59,11 +59,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${cursoInstance?.prof}">
+				<g:if test="${cursoInstance?.profesor}">
 				<li class="fieldcontain">
-					<span id="prof-label" class="property-label"><g:message code="curso.prof.label" default="Prof" /></span>
+					<span id="profesor-label" class="property-label"><g:message code="curso.profesor.label" default="Profesor" /></span>
 					
-						<span class="property-value" aria-labelledby="prof-label"><g:link controller="profesor" action="show" id="${cursoInstance?.prof?.id}">${cursoInstance?.prof?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="profesor-label"><g:link controller="profesor" action="show" id="${cursoInstance?.profesor?.id}">${cursoInstance?.profesor?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>

@@ -34,12 +34,12 @@ class Profesor
     
     String toStringV1()
     {
-         return "${nombre} ${apellidoPaterno} ${apellidoMaterno}"
+         return "${nombre} ${apellidoPaterno} ${apellidoMaterno} ${horarios} ${dias}"
     }
     
     String toString()
     {
-         return "${nombre} ${apellidoPaterno}"
+         return "${nombre} ${apellidoPaterno} ${apellidoMaterno}"
     }
    
 }

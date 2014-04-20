@@ -11,6 +11,8 @@ class Alumno
     String aprobado
     String password
     String usuario
+
+    static belongsTo = [curso:Curso]
     
     static constraints = 
     {

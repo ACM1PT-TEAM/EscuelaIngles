@@ -32,7 +32,7 @@
 					
 						<g:sortableColumn property="aceptado" title="${message(code: 'curso.aceptado.label', default: 'Aceptado')}" />
 					
-						<th><g:message code="curso.prof.label" default="Prof" /></th>
+						<th><g:message code="curso.profesor.label" default="Profesor" /></th>
 					
 					</tr>
 				</thead>
@@ -40,7 +40,7 @@
 				<g:each in="${cursoInstanceList}" status="i" var="cursoInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${cursoInstance.id}">${fieldValue(bean: cursoInstance, field: "nombreCurso")}</g:link></td>
+						<td><g:link controller="alumno" action="create" id="${cursoInstance.id}">${fieldValue(bean: cursoInstance, field: "nombreCurso")}</g:link></td>
 					
 						<td>${fieldValue(bean: cursoInstance, field: "dias")}</td>
 					
@@ -48,7 +48,7 @@
 					
 						<td>${fieldValue(bean: cursoInstance, field: "aceptado")}</td>
 					
-						<td>${fieldValue(bean: cursoInstance, field: "prof")}</td>
+						<td>${fieldValue(bean: cursoInstance, field: "profesor")}</td>
 					
 					</tr>
 				</g:each>
