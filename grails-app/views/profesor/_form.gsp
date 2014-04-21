@@ -34,56 +34,26 @@
 	<g:field type="email" name="correoElectronico" required="" value="${profesorInstance?.correoElectronico}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: profesorInstance, field: 'nivel', 'error')} required">
-	<label for="nivel">
-		<g:message code="profesor.nivel.label" default="Nivel" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:select name="nivel" from="${profesorInstance.constraints.nivel.inList}" required="" value="${profesorInstance?.nivel}" valueMessagePrefix="profesor.nivel"/>
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: profesorInstance, field: 'dias', 'error')} required">
 	<label for="dias">
 		<g:message code="profesor.dias.label" default="Dias" />
 		<span class="required-indicator">*</span>
-                <br/>
-                <span style="font-size:smaller"style="font-style:italic">(Deje presionado 'ctrl' para seleccionar más de una opción)</span>
 	</label>
-        <select name="dias" multiple="true">
-            <option value="lunes">lunes</option>
-            <option value="martes">martes</option>
-            <option value="miercoles">miercoles</option>
-            <option value="jueves">jueves</option>
-            <option value="viernes">viernes</option>
-            <option value="sabado">sabado</option>
-            <option value="domingo">domingo</option>
-        </select>
-    </div>
+	<g:textField name="dias" maxlength="100" required="" value="${profesorInstance?.dias}"/>
+</div>
 
 <div class="fieldcontain ${hasErrors(bean: profesorInstance, field: 'horarios', 'error')} required">
 	<label for="horarios">
 		<g:message code="profesor.horarios.label" default="Horarios" />
 		<span class="required-indicator">*</span>
-                <br/>
-                <span style="font-size:smaller"style="font-style:italic">(Deje presionado 'ctrl' para seleccionar más de una opción)</span>
 	</label>
-        <select name="horarios" multiple="true">
-            <option value="7:00-9:00">7:00-9:00</option>
-            <option value="9:00-11:00">9:00-11:00</option>
-            <option value="11:00-13:00">11:00-13:00</option>
-            <option value="13:00-15:00">13:00-15:00</option>
-            <option value="15:00-17:00">15:00-17:00</option>
-            <option value="17:00-19:00">17:00-19:00</option>
-            <option value="19:00-21:00">19:00-21:00</option>
-        </select>
-	</div>
+	<g:textField name="horarios" maxlength="100" required="" value="${profesorInstance?.horarios}"/>
+</div>
 
 <div class="fieldcontain ${hasErrors(bean: profesorInstance, field: 'usuario', 'error')} required">
 	<label for="usuario">
 		<g:message code="profesor.usuario.label" default="Usuario" />
 		<span class="required-indicator">*</span>
-                <br/>
-                <span style="font-size:smaller" style="font-style:italic">Min. 5 caractéres Max. 15 caractéres</span>
 	</label>
 	<g:textField name="usuario" maxlength="15" required="" value="${profesorInstance?.usuario}"/>
 </div>
@@ -92,8 +62,6 @@
 	<label for="password">
 		<g:message code="profesor.password.label" default="Password" />
 		<span class="required-indicator">*</span>
-                <br/>
-                <span style="font-size:smaller" style="font-style:italic">Min. 8 caractéres Max. 12 caractéres</span>
 	</label>
 	<g:field type="password" name="password" maxlength="12" required="" value="${profesorInstance?.password}"/>
 </div>

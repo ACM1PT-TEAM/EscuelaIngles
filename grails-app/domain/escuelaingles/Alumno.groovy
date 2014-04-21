@@ -20,7 +20,7 @@ class Alumno
         apellidoPaterno blank:false, nullable:false
         apellidoMaterno blank:false, nullable:false 
         correoElectronico blank:false, nullable:false, email:true,unique:true
-        telefono blank:false, nullable:false
+        telefono blank:true, nullable:false
         usuario size:5..15,blank:false, nullable:false,unique:true
         password size:8..12,blank:false, nullable:false,password:true
         aprobado inList:["APROBADO","NO APROBADO","CURSANDO"], nullable:true,blank:true

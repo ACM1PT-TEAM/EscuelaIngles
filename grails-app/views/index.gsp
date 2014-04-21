@@ -27,13 +27,13 @@
         <g:link controller="profesor" action="create"> Postularse como Profesor</g:link>
       </span>
     </div>
-    <div class="homeCell">
+<!--    <div class="homeCell">
       <h3>Registrarte</h3> 
       <p>Si estas interesado en involucrarte mas en los cursos tenemos la opcion
         de que te puedas registrar y posteriormente inscribirte a un curso.</p>
       <span class="buttons">
         <g:link controller="alumno" action="create">Registrarse</g:link>
       </span>
-    </div>
+    </div>-->
   </body>
 </html>

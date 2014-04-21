@@ -14,8 +14,14 @@ class EscuelaInglesTagsTagLib {
             out << "Salir </a></span>"
         } else{
             out << "<span class='buttons' style='float:right;margin-right:10px'>"
+            out << "<a href='${createLink(controller:'Alumno', action:'create')}'>"
+            out << "Registrarse</a></span>"
+            out << "<span class='buttons' style='float:right;margin-right:10px'>"
             out << "<a href='${createLink(controller:'Alumno', action:'login')}'>"
-            out << "Login </a></span>"
+            out << "Login Alumno</a></span>"
+            out << "<span class='buttons' style='float:right;margin-right:10px'>"
+            out << "<a href='${createLink(controller:'Profesor', action:'login')}'>"
+            out << "Login Profesor</a></span>"
         }
         out << "</div><br/>"
     }

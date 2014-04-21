@@ -7,7 +7,6 @@ class Profesor
     String apellidoMaterno
     String correoElectronico
     byte[] video
-    String nivel
     byte[] constancia
     String password
     String usuario
@@ -22,7 +21,6 @@ class Profesor
         apellidoPaterno blank:false, nullable:false 
         apellidoMaterno blank:false, nullable:false 
         correoElectronico blank:false, nullable:false,email:true,unique:true
-        nivel inList:["I","II","III","IV","V","VI"], blank:false, nullable:false
         dias size:5..100,blank:false, nullable:false
         horarios size:5..100, blank:false, nullable:false
         usuario size: 5..15, blank:false, unique:true

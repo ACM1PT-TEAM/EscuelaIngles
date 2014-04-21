@@ -11,7 +11,6 @@ class BootStrap {
             apellidoPaterno:'ACM1',
             apellidoMaterno:'PT',
             correoElectronico:'fernandoacm1@gmail.com',
-            nivel:'III',
             dias:'lunes,martes,viernes',
             horarios:'7:00-9:00,9:00-11:00',
             usuario:'fernando28',
@@ -30,8 +29,7 @@ class BootStrap {
             nombre:'Edward',
             apellidoPaterno:'Cullen',
             apellidoMaterno:'Avendaño',
-            correoElectronico:'cullens@gmail.com',
-            nivel:'I',
+            correoElectronico:'cullens@gmail.com',            
             dias:'lunes,miercoles,viernes',
             horarios:'7:00-9:00',
             usuario:'elmascapo',
@@ -47,8 +45,8 @@ class BootStrap {
         
         def curso1 = new Curso
         (
-            nombreCurso:'Ingles',
-            dias:'lunes,martes,viernes',
+            nivelCurso:'Basico 2',
+            dias:'Lunes, Martes, Viernes',
             horario:'7:00-9:00',
             aceptado:'Aceptado',
             profesor:prof1
@@ -64,8 +62,8 @@ class BootStrap {
         
         def curso2 = new Curso
         (
-            nombreCurso:'Ingles',
-            dias:'lunes,miercoles,viernes',
+            nivelCurso:'Intermedio 1',
+            dias:'Lunes, Miercoles, Viernes',
             horario:'7:00-9:00',
             aceptado:'Aceptado',
             profesor:prof2//Profesor.findByUsuario('elmascapo')

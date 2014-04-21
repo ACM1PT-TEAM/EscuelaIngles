@@ -1,5 +1,7 @@
 <%@ page import="escuelaingles.Alumno" %>
 
+
+
 <div class="fieldcontain ${hasErrors(bean: alumnoInstance, field: 'nombre', 'error')} required">
 	<label for="nombre">
 		<g:message code="alumno.nombre.label" default="Nombre" />
@@ -44,8 +46,6 @@
 	<label for="usuario">
 		<g:message code="alumno.usuario.label" default="Usuario" />
 		<span class="required-indicator">*</span>
-                <br/>
-                <span style="font-size:smaller" style="font-style:italic">Min. 5 caractéres Max. 15 caractéres</span>
 	</label>
 	<g:textField name="usuario" maxlength="15" required="" value="${alumnoInstance?.usuario}"/>
 </div>
@@ -54,8 +54,6 @@
 	<label for="password">
 		<g:message code="alumno.password.label" default="Password" />
 		<span class="required-indicator">*</span>
-                <br/>
-                <span style="font-size:smaller" style="font-style:italic">Min. 8 caractéres Max. 12 caractéres</span>
 	</label>
 	<g:field type="password" name="password" maxlength="12" required="" value="${alumnoInstance?.password}"/>
 </div>
@@ -65,7 +63,7 @@
 		<g:message code="alumno.aprobado.label" default="Aprobado" />
 		
 	</label>
-	<g:select name="aprobado" from="${alumnoInstance.constraints.aprobado.inList}" value="CURSANDO" valueMessagePrefix="alumno.aprobado" noSelection="['': 'CURSANDO']" disabled=""/>
+	<g:select name="aprobado" from="${alumnoInstance.constraints.aprobado.inList}" value="${alumnoInstance?.aprobado}" valueMessagePrefix="alumno.aprobado" noSelection="['': '']"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: alumnoInstance, field: 'calificacion', 'error')} ">
@@ -73,6 +71,14 @@
 		<g:message code="alumno.calificacion.label" default="Calificacion" />
 		
 	</label>
-	<g:select name="calificacion" from="${alumnoInstance.constraints.calificacion.inList}" value="Sin calificacion" valueMessagePrefix="alumno.calificacion" noSelection="['': 'Sin calificacion']" disabled=""/>
+	<g:select name="calificacion" from="${alumnoInstance.constraints.calificacion.inList}" value="${alumnoInstance?.calificacion}" valueMessagePrefix="alumno.calificacion" noSelection="['': '']"/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: alumnoInstance, field: 'curso', 'error')} required">
+	<label for="curso">
+		<g:message code="alumno.curso.label" default="Curso" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:select id="curso" name="curso.id" from="${escuelaingles.Curso.list()}" optionKey="id" required="" value="${alumnoInstance?.curso?.id}" class="many-to-one"/>
 </div>
 

@@ -91,6 +91,26 @@ class ProfesorController {
             '*'{ render status: NO_CONTENT }
         }
     }
+    
+    def login() {
+    }
+    
+    def logout = {
+        session.alumno = null
+        redirect(uri:'/')
+    }
+    
+    def validate() {
+        def profesor = Profesor.findByUsuario(params.usuario)
+        if (profesor && profesor.password == params.password){
+            session.profesor = profesor
+            redirect controller:'profesor',action:'index'
+        }
+        else{
+            flash.message = "Nombre de usuario o Contraseña no valida."
+            render view:'login'
+        }
+    }
 
     protected void notFound() {
         request.withFormat {
