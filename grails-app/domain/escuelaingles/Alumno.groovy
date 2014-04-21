@@ -25,6 +25,7 @@ class Alumno
         password size:8..12,blank:false, nullable:false,password:true
         aprobado inList:["APROBADO","NO APROBADO","CURSANDO"], nullable:true,blank:true
         calificacion inList:["5","6","7","8","9","10","NP","Sin calificacion"],nullable:true,blank:true
+        curso nullable:true
     }
     
     

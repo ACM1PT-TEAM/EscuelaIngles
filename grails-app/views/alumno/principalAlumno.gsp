@@ -31,8 +31,6 @@
             tu cuenta, modifcar tu cuenta, ver los cursos en los que estas inscrito
             y ver las calificaciones de los mismos.</p>
             </br>
-            <h1>Curso</h1>
-
         </div>
         
     </body>
