@@ -9,12 +9,16 @@ class EscuelaInglesTagsTagLib {
         if (request.getSession(false) && (session.alumno||session.profesor)){
             out << "<span style='float:left; margin-left: 15px'>"
             if(session.alumno){
-            out << "Bienvenido ${session.alumno}."}
-            if(session.profesor){
-            out << "Bienvenido ${session.profesor}."}
+            out << "Bienvenido ${session.alumno}."
             out << "</span><span style='float:right;margin-right:15px'>"
             out << "<a href='${createLink(controller:'Alumno', action:'logout')}'>"
             out << "Salir </a></span>"
+            }
+            if(session.profesor){
+            out << "Bienvenido ${session.profesor}."
+            out << "</span><span style='float:right;margin-right:15px'>"
+            out << "<a href='${createLink(controller:'Profesor', action:'logout')}'>"
+            out << "Salir </a></span>"}
         } else{
             out << "<span class='buttons' style='float:right;margin-right:10px'>"
             out << "<a href='${createLink(controller:'Alumno', action:'create')}'>"

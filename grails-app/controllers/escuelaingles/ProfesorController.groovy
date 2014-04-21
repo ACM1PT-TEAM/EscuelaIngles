@@ -96,7 +96,7 @@ class ProfesorController {
     }
     
     def logout = {
-        session.alumno = null
+        session.profesor = null
         redirect(uri:'/')
     }
     
