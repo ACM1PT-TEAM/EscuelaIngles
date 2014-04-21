@@ -23,20 +23,20 @@
 			</g:if>
 			<ol class="property-list solicitud">
 			
-				<g:if test="${solicitudInstance?.alum}">
+				<g:if test="${solicitudInstance?.alumno}">
 				<li class="fieldcontain">
-					<span id="alum-label" class="property-label"><g:message code="solicitud.alum.label" default="Alum" /></span>
+					<span id="alumno-label" class="property-label"><g:message code="solicitud.alumno.label" default="Alumno" /></span>
 					
-						<span class="property-value" aria-labelledby="alum-label"><g:link controller="alumno" action="show" id="${solicitudInstance?.alum?.id}">${solicitudInstance?.alum?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="alumno-label"><g:link controller="alumno" action="show" id="${solicitudInstance?.alumno?.id}">${solicitudInstance?.alumno?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${solicitudInstance?.prof}">
+				<g:if test="${solicitudInstance?.profesor}">
 				<li class="fieldcontain">
-					<span id="prof-label" class="property-label"><g:message code="solicitud.prof.label" default="Prof" /></span>
+					<span id="profesor-label" class="property-label"><g:message code="solicitud.profesor.label" default="Profesor" /></span>
 					
-						<span class="property-value" aria-labelledby="prof-label"><g:link controller="profesor" action="show" id="${solicitudInstance?.prof?.id}">${solicitudInstance?.prof?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="profesor-label"><g:link controller="profesor" action="show" id="${solicitudInstance?.profesor?.id}">${solicitudInstance?.profesor?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>

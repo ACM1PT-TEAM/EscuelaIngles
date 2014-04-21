@@ -11,17 +11,17 @@
         <a href="#page-body" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 	<div class="nav" role="navigation">
 		<ul>
-			<li><a class="home" href="${createLink(uri: '/')}">Inicio</a></li>
+			<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
 		</ul>
 	</div>
         <div id="status" role="complementary">
 		<h1>Menu de opciones</h1>
-                <g:link class="edit" action="edit" resource="${alumnoInstance}">
-                    <g:message code=" " default="Modificar cuenta" />
+                <g:link controller="alumno" action="edit" id="${session.alumno.id}">
+                   Modificar cuenta
                 </g:link>
                 </br>
-                <g:link class="show" action="show" resource="${alumnoInstance}">
-                    <g:message code="default.button.show.label" default="Ver Cuenta" />
+                <g:link controller="alumno" action="show" id="${session.alumno.id}">
+                    Ver Cuenta
                 </g:link>
 	</div>
         <div id="page-body" role="main">

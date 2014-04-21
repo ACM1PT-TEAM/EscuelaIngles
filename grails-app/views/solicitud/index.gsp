@@ -24,9 +24,9 @@
 			<thead>
 					<tr>
 					
-						<th><g:message code="solicitud.alum.label" default="Alum" /></th>
+						<th><g:message code="solicitud.alumno.label" default="Alumno" /></th>
 					
-						<th><g:message code="solicitud.prof.label" default="Prof" /></th>
+						<th><g:message code="solicitud.profesor.label" default="Profesor" /></th>
 					
 						<g:sortableColumn property="estado" title="${message(code: 'solicitud.estado.label', default: 'Estado')}" />
 					
@@ -36,9 +36,9 @@
 				<g:each in="${solicitudInstanceList}" status="i" var="solicitudInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${solicitudInstance.id}">${fieldValue(bean: solicitudInstance, field: "alum")}</g:link></td>
+						<td><g:link action="show" id="${solicitudInstance.id}">${fieldValue(bean: solicitudInstance, field: "alumno")}</g:link></td>
 					
-						<td>${fieldValue(bean: solicitudInstance, field: "prof")}</td>
+						<td>${fieldValue(bean: solicitudInstance, field: "profesor")}</td>
 					
 						<td>${fieldValue(bean: solicitudInstance, field: "estado")}</td>
 					

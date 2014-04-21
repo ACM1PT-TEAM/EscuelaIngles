@@ -2,13 +2,15 @@ package escuelaingles
 
 class Solicitud {
 
-    Alumno alum;
-    Profesor prof;
+    Alumno alumno;
+    Profesor profesor;
     String estado;
     
+    static belongsTo = [profesor:Profesor]
+    
     static constraints = {
-        alum nullable : true
-        prof nullable : true
+        alumno nullable : true
+        profesor nullable : true
         estado nullable : true, inList:["Aprobada","Rechazada"]
     }
 }

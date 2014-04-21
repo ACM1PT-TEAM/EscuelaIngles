@@ -13,7 +13,7 @@ class Profesor
     String dias
     String horarios         
     
-    static hasMany = [cursos: Curso]
+    static hasMany = [cursos: Curso, solicitudes:Solicitud]
 
     static constraints = 
     {
@@ -28,6 +28,7 @@ class Profesor
         video nullable:true, maxSize: 104857600//,url:true)
         constancia nullable:true, maxSize: 1000000//,url:true)
         cursos nullable:true
+        solicitudes nullable:true
     }
     
     String toStringV1()
