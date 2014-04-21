@@ -17,7 +17,11 @@
         <div id="status" role="complementary">
 		<h1>Menu de opciones</h1>
                 <g:link class="edit" action="edit" resource="${alumnoInstance}">
-                    <g:message code="default.button.edit.label" default="Edit" />
+                    <g:message code=" " default="Modificar cuenta" />
+                </g:link>
+                </br>
+                <g:link class="show" action="show" resource="${alumnoInstance}">
+                    <g:message code="default.button.show.label" default="Ver Cuenta" />
                 </g:link>
 	</div>
         <div id="page-body" role="main">
