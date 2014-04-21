@@ -1,4 +1,3 @@
-
 <%@ page import="escuelaingles.Profesor" %>
 <!DOCTYPE html>
 <html>

@@ -100,11 +100,17 @@ class AlumnoController {
         redirect(uri:'/')
     }
     
+    def principalAlumno(Integer max)
+    {
+        params.max = Math.min(max ?: 10, 100)
+        respond Alumno.list(params), model:[alumnoInstanceCount: Alumno.count()]
+    }
+    
     def validate() {
         def alumno = Alumno.findByUsuario(params.usuario)
         if (alumno && alumno.password == params.password){
             session.alumno = alumno
-            redirect controller:'Alumno', action:'index'
+            redirect controller:'alumno',action:'principalAlumno'
         }
         else{
             flash.message = "Nombre de usuario o Contraseña no valida."

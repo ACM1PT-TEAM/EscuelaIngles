@@ -13,17 +13,24 @@
         <title>Login</title>
     </head>
     <body>
+        <a href="#list-alumno" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
+	<div class="nav" role="navigation">
+		<ul>
+			<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
+		</ul>
+	</div>
         <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
         </g:if>
         <g:form action="validate">
+            </br>
             <table>
                 <tr class="prop">
                     <td class="name">
                         <label for="usuario">Usuario:</label>
                     </td>
                     <td class="value">
-                        <input type="text" id="usuario" name="usuario" value=" ">
+                        <input type="text" id="usuario" name="usuario" value="Usuario" style="font-style:italic" style="font-size:smaller">
                     </td>
                 </tr>
                 <tr class="prop">

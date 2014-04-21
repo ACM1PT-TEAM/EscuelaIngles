@@ -27,7 +27,7 @@ class Profesor
         horarios size:5..100, blank:false, nullable:false
         usuario size: 5..15, blank:false, unique:true
         password size:8..12,blank:false,password:true
-        video nullable:true, maxSize: 1000000//,url:true)
+        video nullable:true, maxSize: 104857600//,url:true)
         constancia nullable:true, maxSize: 1000000//,url:true)
         cursos nullable:true
     }

@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta name="layout" content="main"/>
-    <title>Escuela de Ingles</title
+    <title>Escuela de Ingles</title>
   </head>
   <body>  
     <div id="welcome">
