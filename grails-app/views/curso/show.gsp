@@ -47,8 +47,11 @@
 					
 				</li>
 				</g:if>
-			
-			</ol>
-		</div>
+                                
+        		</ol>
+        	</div>
+                <span class="buttons"> 
+                                <g:link controller="alumno" class="create" action="create">Inscribir</g:link>
+                </span>
 	</body>
 </html>
