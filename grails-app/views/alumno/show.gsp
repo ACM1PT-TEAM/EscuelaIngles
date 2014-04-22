@@ -106,7 +106,7 @@
 				<li class="fieldcontain">
 					<span id="curso-label" class="property-label"><g:message code="alumno.curso.label" default="Curso" /></span>
 					
-						<span class="property-value" aria-labelledby="curso-label"><g:link controller="curso" action="show" id="${alumnoInstance?.curso?.id}">${alumnoInstance?.curso?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="curso-label"><g:link controller="curso" action="show_alumno" id="${alumnoInstance?.curso?.id}">${alumnoInstance?.curso?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>

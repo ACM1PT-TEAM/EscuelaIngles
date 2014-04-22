@@ -18,7 +18,10 @@ class CursoController {
     def show(Curso cursoInstance) {
         respond cursoInstance
     }
-
+    
+    def show_alumno(Curso cursoInstance) {
+        respond cursoInstance
+    }
     def create() {
         respond new Curso(params)
     }

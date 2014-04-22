@@ -34,7 +34,7 @@ class ProfesorController {
             respond profesorInstance.errors, view:'create'
             return
         }
-
+        
         profesorInstance.save flush:true
 
         request.withFormat {

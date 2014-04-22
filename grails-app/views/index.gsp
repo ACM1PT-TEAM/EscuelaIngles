@@ -17,8 +17,8 @@
       <p> Comprueba si hay un curso que se acomode a tu horario y necesidades.</p>
       <span class="buttons"> 
            <g:link controller="curso" action="index">Consultar Cursos</g:link>
-           </br>
-           <g:link controller="escuela" action="principalEscuela">Administrador</g:link>
+          <!-- </br>
+           <g:link controller="escuela" action="principalEscuela">Administrador</g:link>-->
       </span>
     </div>
     <div class="homeCell">
