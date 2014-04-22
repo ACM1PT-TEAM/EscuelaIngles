@@ -31,11 +31,11 @@ class Profesor
         solicitudes nullable:true
     }
     
-    String toStringV1()
-    {
-         return "${nombre} ${apellidoPaterno} ${apellidoMaterno} ${horarios} ${dias}"
-    }
-    
+//    String toStringV1()
+//    {
+//         return "${nombre} ${apellidoPaterno} ${apellidoMaterno} ${horarios} ${dias}"
+//    }
+//    
     String toString()
     {
          return "${nombre} ${apellidoPaterno} ${apellidoMaterno}"

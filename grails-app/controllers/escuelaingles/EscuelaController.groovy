@@ -92,6 +92,12 @@ class EscuelaController {
         }
     }
 
+    def principalEscuela(Integer max)
+    {
+        params.max = Math.min(max ?: 10, 100)
+        respond Escuela.list(params), model:[escuelaInstanceCount: Escuela.count()]
+    }
+    
     protected void notFound() {
         request.withFormat {
             form {

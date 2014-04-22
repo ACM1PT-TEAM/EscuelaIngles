@@ -5,7 +5,7 @@
 	<head>
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'curso.label', default: 'Curso')}" />
-		<title>${cursoInstance}</title>
+		<title>${cursoInstance?.nivelCurso}</title>
 	</head>
 	<body>
 		<a href="#show-curso" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
@@ -16,7 +16,7 @@
 			</ul>
 		</div>
 		<div id="show-curso" class="content scaffold-show" role="main">
-			<h1>${cursoInstance}</h1>
+			<h1>${cursoInstance?.nivelCurso}</h1>
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>

@@ -23,7 +23,6 @@ class Curso
     
     String toString()
     {
-        if(profesor != null)
             return "${nivelCurso} ${horario}"
     }
 }
