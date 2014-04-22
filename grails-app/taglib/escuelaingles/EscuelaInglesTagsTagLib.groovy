@@ -6,7 +6,7 @@ class EscuelaInglesTagsTagLib {
     
     def loginToggle = {
         out << "<div style='margin: 15px 0 40px;'>"
-        if (request.getSession(false) && (session.alumno||session.profesor||session.escuela)){
+        if (request.getSession(false) && (session.alumno||session.profesor)){
             out << "<span style='float:left; margin-left: 15px'>"
             if(session.alumno){            
             out << "Bienvenido <a href='${createLink(controller:'Alumno', action:'principalAlumno')}'>${session.alumno}.</a>"
